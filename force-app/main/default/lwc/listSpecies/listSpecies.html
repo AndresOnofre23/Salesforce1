@@ -1,0 +1,16 @@
+<template>
+  <div class="slds-align_absolute-center">
+    <div class="slds-grid slds-wrap slds-grid_align-spread" style="width:1100px;">
+      <template if:true={species.data}>
+        <template for:each={species.data} for:item="spec" >
+          <div key={spec.Id} >
+              <c-specie 
+              specie={spec}
+              class="slds-col slds-var-m-around_small"
+              ></c-specie>
+          </div>
+        </template> 
+      </template>
+    </div> 
+  </div>  
+</template>
